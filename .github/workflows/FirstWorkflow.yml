@@ -14,9 +14,11 @@ jobs:
     steps:
       - name: Hello World
         run: echo "Hello World"
+      - name: Event Name
+        run: echo "Event Name :${{github.event_name}}"
 
   #Second job
-  echo-goodbye:
+  echo-goodbye: 
     needs: Hello-job
     runs-on: ubuntu-slim
     steps:
