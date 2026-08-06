@@ -1,0 +1,17 @@
+#Workflow Name
+name : First Workflow
+
+#Trigger
+on :
+  push: 
+  workflow_dispatch:  #manual
+
+jobs:
+  #First Job
+  Hello-job:
+    #runner - GitHub hosted
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo "Hello World"
+      
